@@ -12,20 +12,18 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = JpashopApplication.class)
-//springframwork에 있는 Transactional을 사용할 것, 테스트를 마치면 롤백함
-//모든 데이터 변경은 트랜젝션 안에서 이루어져야 한다
+@SpringBootTest
 class MemberRepositoryTest {
     @Autowired
     private MemberRepository memberRepository;
 
     @Test
-//    @Transactional
+    @Transactional
 //    @Rollback(false)
     public void testMember() throws Exception {
         //given
         Member member = new Member();
-        member.setUsername("memberB");
+        member.setUsername("memberA");
 
         //when
         Long savedId = memberRepository.save(member);
