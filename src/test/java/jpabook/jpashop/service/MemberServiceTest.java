@@ -1,13 +1,11 @@
 package jpabook.jpashop.service;
 
-import jakarta.annotation.security.RunAs;
 import jpabook.jpashop.domain.Member;
-import jpabook.jpashop.respository.MemberRepository;
+import jpabook.jpashop.repository.MemberRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.graphql.tester.AutoConfigureHttpGraphQlTester;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;

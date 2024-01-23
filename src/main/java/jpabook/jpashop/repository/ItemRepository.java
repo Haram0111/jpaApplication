@@ -1,4 +1,4 @@
-package jpabook.jpashop.respository;
+package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
 import jpabook.jpashop.domain.item.Item;
